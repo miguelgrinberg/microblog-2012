@@ -1,6 +1,6 @@
-from flask.ext.wtf import Form, TextField, BooleanField, TextAreaField
-from flask.ext.wtf import Required, Length
-from app.models import User
+from flask.ext.wtf import Form
+from wtforms import TextField, BooleanField, TextAreaField
+from wtforms.validators import Required, Length
 
 class LoginForm(Form):
     openid = TextField('openid', validators = [Required()])
@@ -27,4 +27,4 @@ class EditForm(Form):
         
 class PostForm(Form):
     post = TextField('post', validators = [Required()])
-    
+
