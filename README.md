@@ -6,7 +6,7 @@ A decently featured microblogging web application written in Python and Flask th
 Installation
 ------------
 
-The tutorial referenced above explains how to setup a virtual environment with all the required modules. As a convenience, the `setup.py` script will create this virtual environment for you. You can run this script again to refresh any missing modules.
+The tutorial referenced above explains how to setup a virtual environment with all the required modules.
 
 The sqlite database must also be created before the application can run, and the `db_create.py` script takes care of that. See the [Database tutorial](http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-iv-database) for the details.
 
