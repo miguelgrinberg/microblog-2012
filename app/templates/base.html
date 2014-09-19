@@ -2,7 +2,7 @@
 <html>
   <head>
     {% if title %}
-    <title>{{title}} - microblog</title>
+    <title>{{ title }} - microblog</title>
     {% else %}
     <title>microblog</title>
     {% endif %}
@@ -29,13 +29,13 @@
             <ul class="nav">
               <li><a href="{{ url_for('index') }}">{{ _('Home') }}</a></li>
               {% if g.user.is_authenticated() %}
-              <li><a href="{{ url_for('user', nickname = g.user.nickname) }}">{{ _('Your Profile') }}</a></li>
+              <li><a href="{{ url_for('user', nickname=g.user.nickname) }}">{{ _('Your Profile') }}</a></li>
               <li><a href="{{ url_for('logout') }}">{{ _('Logout') }}</a></li>
               {% endif %}
             </ul>
           <div class="nav-collapse collapse">
             {% if g.user.is_authenticated() %}
-            <form class="navbar-search pull-right" action="{{url_for('search')}}" method="post" name="search">{{g.search_form.hidden_tag()}}{{g.search_form.search(size=20,placeholder=_('Search'),class="search-query")}}</form>
+            <form class="navbar-search pull-right" action="{{ url_for('search') }}" method="post" name="search">{{ g.search_form.hidden_tag() }}{{ g.search_form.search(size=20, placeholder=_('Search'), class="search-query")}}</form>
             {% endif %}
           </div>
         </div>
