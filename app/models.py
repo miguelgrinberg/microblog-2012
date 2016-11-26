@@ -8,7 +8,7 @@ if sys.version_info >= (3, 0):
     enable_search = False
 else:
     enable_search = True
-    import flask.ext.whooshalchemy as whooshalchemy
+    import flask_whooshalchemy
 
 
 followers = db.Table(
